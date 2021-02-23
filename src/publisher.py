@@ -12,12 +12,9 @@ def talker():
     message=PoseStamped()
 
     print(message)
-    #message.pose.position.x=42
-    #print(message)
 
     message.header.frame_id="map"
     while not rospy.is_shutdown():
-	#theta=rospy.get_time()   #theta est maintenant dependant de temps
 	r=10
 	theta=0
 
