@@ -21,7 +21,7 @@ def talker():
 	r=10
 	theta=0
 
-	while theta < 2*(math.pi):
+	while theta <= 2*(math.pi):
 		message.pose.position.x=theta
 		message.pose.position.y=math.sin(theta)
 		pub.publish(message)
@@ -29,7 +29,12 @@ def talker():
 		theta = theta + 0.1
 
 
-	
+	while theta >= 0:
+		message.pose.position.x=theta
+		message.pose.position.y=math.asin(-theta)
+		pub.publish(message)
+        	rate.sleep()
+		theta = theta - 0.1
 
 	print(message)
         #rospy.loginfo(hello_str)
