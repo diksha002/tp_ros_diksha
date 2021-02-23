@@ -31,7 +31,7 @@ def talker():
 
 	while theta >= 0:
 		message.pose.position.x=theta
-		message.pose.position.y=math.asin(-theta)
+		message.pose.position.y=math.sin(-theta)
 		pub.publish(message)
         	rate.sleep()
 		theta = theta - 0.1
