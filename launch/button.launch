@@ -2,7 +2,7 @@
 
 	<node pkg="tp_ros_diksha" name="pub" type="publisher.py"/>
 
-	<node pkg="tp_ros_diksha" name="button"type="button_node.py" output="screen">
+	<node pkg="tp_ros_diksha" name="button" type="button_node.py" output="screen">
 		<remap from="button_state" to="chatter"/>
 	</node>
 	
