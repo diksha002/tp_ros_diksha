@@ -20,7 +20,7 @@ def callback(data):
 
 		r=10
 		theta=0
-
+	#if(data.data==True):
 		while theta <= 2*(math.pi):
 			message.pose.position.x=theta
 			message.pose.position.y=math.sin(theta)
