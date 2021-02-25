@@ -5,22 +5,19 @@ import math
 from geometry_msgs.msg import PoseStamped
 from std_msgs.msg import Bool
 from Tkinter import *
-import time
+
 
 global bl #variable boolean
 def callback(data):
-    	if(data==True):
-	    pub = rospy.Publisher('chatter', PoseStamped, queue_size=10)
-	    rate = rospy.Rate(15) # 15hz
+	#bl=data.data
+	if(data.data==True):
+		pub = rospy.Publisher('chatter', PoseStamped, queue_size=10)
+		rate = rospy.Rate(15) # 15hz
 
-	    message=PoseStamped()
+		message=PoseStamped()
 
-	    print(message)
+		message.header.frame_id="map"
 
-	    message.header.frame_id="map"
-
-
-	    while not rospy.is_shutdown():
 		r=10
 		theta=0
 
@@ -39,19 +36,15 @@ def callback(data):
 			rate.sleep()
 			theta = theta - 0.1
 
-		print(message)
-    	else:
-		time.sleep(2)
+	    #print(message)
 	
 
 def talker():
     
-        #rospy.loginfo(hello_str)
-        rospy.init_node('listener', anonymous=True)
+        rospy.init_node('listen', anonymous=True)
  
 	rospy.Subscriber("button_state", Bool, callback)
        
-     # spin() simply keeps python from exiting until this node is stopped
 	rospy.spin()
 
 if __name__ == '__main__':
