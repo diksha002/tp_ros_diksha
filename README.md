@@ -1,9 +1,9 @@
 # tp_ros_diksha
 Ce package contient plusieurs noeuds qui sont un bouton, un publisher, un subscriber et un fichier launch.
 
-Pour souscrire et publire, les code se trouve dans un seul noeud nommé publisher.py
+Pour souscrire et publire, les codes se trouvent dans un seul noeud nommé publisher.py
 
-Le but de ce projet est de manipuler le mouvement du PoseStamped et le faire bouger et arreter sur rviz en se servant du bouton
+Le but de ce projet est de manipuler le mouvement du PoseStamped et le faire bouger et arreter sur rviz en se servant d'un bouton
 
 Pour lancer le projet, il suffit de lancer le launch file button.launch
 
