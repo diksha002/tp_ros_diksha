@@ -42,7 +42,6 @@ Une petite fenetre avec un bouton toggle va apparaitre et aussi l'interface rviz
 Cliquez sur le bouton toggle
 
 ## rviz
-Sur rviz, ajoutez le topic nommé `chatter`
 Vous devrez voir un PoseStamped qui suit le trajectoire d'un huit.
 
 Quand le bouton est appuis initialement, l'état du topic est false, donc le PoseStamped reste immobile.
