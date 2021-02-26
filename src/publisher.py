@@ -10,7 +10,7 @@ from Tkinter import *
 global bl #variable boolean
 def callback(data):
 	#bl=data.data
-	if(data.data==True):
+	while(data.data==True):
 		pub = rospy.Publisher('chatter', PoseStamped, queue_size=10)
 		rate = rospy.Rate(15) # 15hz
 
@@ -20,7 +20,7 @@ def callback(data):
 
 		r=10
 		theta=0
-	#if(data.data==True):
+	
 		while theta <= 2*(math.pi):
 			message.pose.position.x=theta
 			message.pose.position.y=math.sin(theta)

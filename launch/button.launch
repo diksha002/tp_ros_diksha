@@ -2,10 +2,11 @@
 
 	<node pkg="tp_ros_diksha" name="listen" type="publisher.py"/>
 
-	<node pkg="tp_ros_diksha" name="button" type="button_node.py" output="screen">
-		<remap from="button_state" to="chatter"/>
+	<node pkg="tp_ros_diksha" name="button_state" type="button_node.py" output="screen">
+		
 	</node>
 	
+	<node pkg="tp_ros_diksha" name="chatter" type="publisher.py"/>
 	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find tp_ros_diksha)/config/button.rviz" required="true">
 	</node>
 	
