@@ -43,13 +43,13 @@ Cliquez sur le bouton toggle
 
 ## rviz
 Sur rviz, ajoutez le topic nommé `chatter`
-Vous devrez voir un PoseStamped qui suit le trajectoire d'un huit
+Vous devrez voir un PoseStamped qui suit le trajectoire d'un huit.
 
 Quand le bouton est appuis initialement, l'état du topic est false, donc le PoseStamped reste immobile.
 
-Pour que le PoseStamped fait le trajectoire de huit, il faut juste re-appuyer sur le bouton pour que l'état du topic devient true
+Pour que le PoseStamped fait le trajectoire de huit, il faut juste re-appuyer sur le bouton pour que l'état du topic devient true.
 
-Chaque fois l'état du topic devient false, le PoseStamped s'arretera
+Chaque fois l'état du topic devient false, le PoseStamped s'arretera.
 
 ## Rostopic
 Si vous voulez voir l'état du topic chaque fois vous appuyez sur le bouton, 
